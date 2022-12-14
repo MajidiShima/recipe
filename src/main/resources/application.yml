@@ -1,0 +1,23 @@
+  server:
+    port: 8080
+
+  spring:
+    datasource:
+      #url: jdbc:oracle:thin:@tnsName
+      #url: jdbc:oracle:thin:@172.15.0.65:1521/shima
+      url: jdbc:oracle:thin:@localhost:1521:orcl
+      username: shima
+      password: shima
+      driver-class-name: oracle.jdbc.OracleDriver
+
+      #spring.datasource.username=rahvar
+      #spring.datasource.password=rahvar
+      #spring.datasource.url=jdbc:oracle:thin:@172.15.0.99:1521/cmappdb
+      #spring.datasource.driverClassName=oracle.jdbc.OracleDriver
+
+  # JPA settings
+    jpa:
+      database-platform: org.hibernate.dialect.Oracle12cDialect
+      hibernate :
+       use-new-id-generator-mappings: false
+      ddl-auto: create
