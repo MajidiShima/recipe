@@ -2,11 +2,10 @@ package com.parsa.recipe.ingredient;
 
 
 import com.parsa.recipe.common.BaseEntity;
+import com.parsa.recipe.recipe.Recipe;
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Data
@@ -19,7 +18,11 @@ public class Ingredient extends BaseEntity {
     private String description;
 
     @Column(name = "amount")
-    private BigDecimal amount;
+    private Integer amount;
+
+    @ManyToOne()
+    @JoinColumn(name = "recipe_id")
+    private Recipe recipe;
 
 
 

@@ -1,13 +1,13 @@
 package com.parsa.recipe.category;
 
 
+import com.parsa.recipe.category_list.CategoryList;
 import com.parsa.recipe.common.BaseEntity;
 import lombok.Data;
 import org.hibernate.envers.Audited;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.List;
 
 @Data
 @Audited
@@ -16,12 +16,15 @@ import javax.persistence.Table;
 
 public class Category extends BaseEntity {
 
-@Column(name = "name")
-private String name;
+@Column(name = "title")
+private String title;
 
 
-@Column(name="department")
-private String department;
+
+@OneToMany(mappedBy = "category",fetch = FetchType.LAZY,cascade =CascadeType.ALL)
+private List<CategoryList> categoryLists;
+
+
 
 
 }

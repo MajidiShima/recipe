@@ -9,7 +9,8 @@ import javax.persistence.Table;
 @Entity
 @Data
 @Table(name = "tbl_note")
-public class Note extends BaseEntity {
+public class
+Note extends BaseEntity {
 
 
 

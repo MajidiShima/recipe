@@ -14,7 +14,8 @@ import javax.persistence.Table;
 @Table(name = "tbl_recipeCategory")
 
 
-public class RecipeCategory extends BaseEntity {
+public class
+RecipeCategory extends BaseEntity {
 
 
 
