@@ -16,7 +16,7 @@ public class SearchSpecification<T> implements Specification<T> {
 
     private List<SearchCriteria> list;
 
-    public SearchSpecification(List<SearchCriteria> list) {
+    public SearchSpecification() {
         this.list = new ArrayList<>();
     }
 
@@ -27,15 +27,14 @@ public class SearchSpecification<T> implements Specification<T> {
     @Override
     public Predicate toPredicate(Root<T> root, CriteriaQuery<?> query, CriteriaBuilder builder) {
         List<Predicate> predicates = new ArrayList<>();
-        for (SearchCriteria criteria:list){
-            if(criteria.getOperation().equals(SearchOperation.GREATER_THAN)){
+        for (SearchCriteria criteria : list) {
+            if (criteria.getOperation().equals(SearchOperation.GREATER_THAN)) {
                 predicates.add(builder.greaterThan(root.get(criteria.getKey()), criteria.getValue().toString()));
 
             } else if (criteria.getOperation().equals(SearchOperation.LESS_THAN)) {
                 predicates.add(builder.lessThan(
                         root.get(criteria.getKey()), criteria.getValue().toString()));
-            }
-            else if (criteria.getOperation().equals(SearchOperation.GREATER_THAN_EQUAL)) {
+            } else if (criteria.getOperation().equals(SearchOperation.GREATER_THAN_EQUAL)) {
                 predicates.add(builder.greaterThanOrEqualTo(
                         root.get(criteria.getKey()), criteria.getValue().toString()));
             } else if (criteria.getOperation().equals(SearchOperation.LESS_THAN_EQUAL)) {

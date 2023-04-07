@@ -6,8 +6,8 @@ public interface UserMapper {
 
 User toUser(UserDTO userDTO);
 UserDTO toUserDTO(User user);
-List<User> userList(List<User> userList);
-List<UserDTO> userDTOList(List<UserDTO> userDTOList);
+List<User> toUserList(List<UserDTO> userDTOList);
+List<UserDTO> TOUserDTOList(List<User> userList);
 
 
 

@@ -1,7 +1,12 @@
 package com.parsa.recipe.common;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.List;
 
+@Data
+@AllArgsConstructor
 public class PagingData <T> {
 
     private Integer totalPage;
