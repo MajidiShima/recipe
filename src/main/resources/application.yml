@@ -5,7 +5,7 @@
     datasource:
       #url: jdbc:oracle:thin:@tnsName
       #url: jdbc:oracle:thin:@172.15.0.65:1521/shima
-      url: jdbc:oracle:thin:@localhost:1521:orcl
+      url: jdbc:postgresql://localhost:5432/
       username: shima
       password: shima
       driver-class-name: oracle.jdbc.OracleDriver
@@ -21,3 +21,10 @@
       hibernate :
        use-new-id-generator-mappings: false
       ddl-auto: create
+      show-sql: true
+
+
+
+
+
+
