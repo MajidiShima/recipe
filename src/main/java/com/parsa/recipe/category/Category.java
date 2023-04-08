@@ -17,17 +17,15 @@ import java.util.List;
 
 public class Category extends BaseEntity {
 
-@Column(name = "title")
-private String title;
+    @Column(name = "title")
+    private String title;
 
-@OneToOne()
-@JoinColumn(name = "recipe_id")
-private Recipe recipe;
+    @OneToOne()
+    @JoinColumn(name = "recipe_id")
+    private Recipe recipe;
 
-@OneToMany(mappedBy = "category",fetch = FetchType.LAZY,cascade =CascadeType.ALL)
-private List<CategoryList> categoryList;
-
-
+    @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<CategoryList> categoryList;
 
 
 }

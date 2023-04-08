@@ -9,8 +9,8 @@ public class CategoryDTO  extends BaseDTO {
     @ApiModelProperty(required = true,hidden = false)
     private String name;
 
-    @ApiModelProperty(required = true,hidden = true)
-    private String department;
+
+
 
 
 }
