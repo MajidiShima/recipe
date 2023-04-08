@@ -1,7 +1,6 @@
 package com.parsa.recipe.recipe;
 
 import com.parsa.recipe.common.BaseDTO;
-import com.parsa.recipe.user.User;
 import com.parsa.recipe.user.UserDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
